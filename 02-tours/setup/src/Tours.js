@@ -12,7 +12,7 @@ const Tours = ({tours, removeTour}) => {
       
       })}
     </div>
-
+      
   </section>
 
 

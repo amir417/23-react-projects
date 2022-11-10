@@ -14,15 +14,6 @@ const Review = () => {
     }
     return number;   
   };
-  const nextPerson = () => {
-    setIndex((index) => {
-      let newIndex = index + 1;
-      return checkNumber(newIndex);
-    });
-  };
-  const prevPerson = () => {
-    setIndex(checkNumber( index-1)) 
-  };
 
   const randomPerson = () => {
     let random = Math.floor(Math.random() * 5)
@@ -44,10 +35,10 @@ const Review = () => {
       <p className='job'>{job}</p>
       <p className='info'>{text}</p>
       <div className='button-container'>
-        <button className='prev-btn' onClick={prevPerson}>
+        <button className='prev-btn' onClick={() =>setIndex(checkNumber( index-1))}>
           <FaChevronLeft />
         </button>
-        <button className='next-btn' onClick={nextPerson}>
+        <button className='next-btn' onClick={() => setIndex(checkNumber( index+1))}>
           <FaChevronRight />
         </button>
       </div>

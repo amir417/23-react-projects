@@ -15,7 +15,7 @@ function App() {
     setTours(newTours);
   };
   
-  console.log ('as')
+  console.log ('testing'); // not part of the program
 
   const fetchTours = async () => {
     setLoading(true);
@@ -31,7 +31,6 @@ function App() {
     }
     
   };
-  console.log ('arfwerwerwerwer')
   useEffect ( () => {
     fetchTours();
   }, []);
